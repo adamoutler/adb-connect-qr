@@ -2,6 +2,8 @@
 
 Easy connection for wireless adb.
 
+**Watch the demo:** [YouTube Video](https://www.youtube.com/watch?v=SXBMxuTbqqg)
+
 ## Example Session
 
 ```
