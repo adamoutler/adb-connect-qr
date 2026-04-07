@@ -23,3 +23,8 @@ dependencies = [
 
 [project.scripts]
 adb-connect-qr = "adb_connect_qr.main:main"
+
+[project.urls]
+Homepage = "https://github.com/adamoutler/adb-connect-qr"
+Repository = "https://github.com/adamoutler/adb-connect-qr"
+
