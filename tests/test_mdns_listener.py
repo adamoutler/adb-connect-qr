@@ -1,5 +1,5 @@
 import unittest
-from src.mdns_listener import AdbPairingListener
+from adb_connect_qr.mdns_listener import AdbPairingListener
 
 class DummyServiceInfo:
     def __init__(self, addresses, port):

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 import sys
-from src.qr_generator import generate_random_string, generate_pairing_string, print_qr_code
-from src.mdns_listener import discover_service
-from src.adb_wrapper import pair_device, connect_device
+from .qr_generator import generate_random_string, generate_pairing_string, print_qr_code
+from .mdns_listener import discover_service
+from .adb_wrapper import pair_device, connect_device
 
 def main():
     print("Starting ADB QR Code Pairing...")
@@ -43,7 +43,7 @@ def main():
     # Modified discovery for connection - waiting for _adb-tls-connect._tcp.local. from the same IP
     import time
     from zeroconf import ServiceBrowser, Zeroconf
-    from src.mdns_listener import AdbPairingListener
+    from .mdns_listener import AdbPairingListener
     
     class ConnectListener(AdbPairingListener):
         def __init__(self, target_ip):

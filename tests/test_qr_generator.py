@@ -1,5 +1,5 @@
 import unittest
-from src.qr_generator import generate_pairing_string
+from adb_connect_qr.qr_generator import generate_pairing_string
 
 class TestQRGenerator(unittest.TestCase):
     def test_generate_pairing_string(self):

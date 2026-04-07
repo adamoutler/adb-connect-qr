@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch, MagicMock
-from src.adb_wrapper import pair_device, connect_device
+from adb_connect_qr.adb_wrapper import pair_device, connect_device
 
 class TestAdbWrapper(unittest.TestCase):
     @patch('subprocess.run')

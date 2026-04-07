@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adb-connect-qr"
+version = "0.1.0"
+authors = [
+  { name="Adam Outler", email="adamoutler@gmail.com" },
+]
+description = "A Python CLI tool for pairing Android 11+ wireless debugging using QR codes"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "zeroconf>=0.131.0",
+    "qrcode>=7.4.2",
+]
+
+[project.scripts]
+adb-connect-qr = "adb_connect_qr.main:main"
