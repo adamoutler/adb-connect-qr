@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "adb-connect-qr"
-version = "0.1.1"
+version = "0.1.2"
 authors = [
   { name="Adam Outler", email="adamoutler@gmail.com" },
 ]
@@ -27,4 +27,7 @@ adb-connect-qr = "adb_connect_qr.main:main"
 [project.urls]
 Homepage = "https://github.com/adamoutler/adb-connect-qr"
 Repository = "https://github.com/adamoutler/adb-connect-qr"
+
+[tool.setuptools.packages.find]
+include = ["adb_connect_qr*"]
 
