@@ -9,7 +9,7 @@ def generate_random_string(length: int) -> str:
 def generate_pairing_string(service_name: str, password: str) -> str:
     return f"WIFI:T:ADB;S:{service_name};P:{password};;"
 
-def print_qr_code(payload: str):
+def print_qr_code(payload: str, invert: bool = False) -> None:
     qr = qrcode.QRCode()
     qr.add_data(payload)
-    qr.print_ascii()
+    qr.print_ascii(invert=invert)
