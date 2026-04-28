@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
 import sys
+import argparse
 from .qr_generator import generate_random_string, generate_pairing_string, print_qr_code
 from .mdns_listener import discover_service
 from .adb_wrapper import pair_device, connect_device
 
 def main():
+    parser = argparse.ArgumentParser(description="Pair Android device via QR code wireless debugging")
+    parser.add_argument("--invert", action="store_true", help="Display inverted QR code (white on black)")
+    args = parser.parse_args()
+    
     print("Starting ADB QR Code Pairing...")
     
     # 1. Generate Config
@@ -16,7 +21,7 @@ def main():
     print(f"\nScan this QR code in Android > Developer Options > Wireless Debugging > Pair device with QR code\n")
     print(f"Service Name: {service_name}")
     print(f"Password: {password}\n")
-    print_qr_code(payload)
+    print_qr_code(payload, invert=args.invert)
     
     # 3. Discover Pairing Service
     print(f"\nWaiting for device to scan QR code (timeout 60s)...")
